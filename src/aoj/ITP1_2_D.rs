@@ -10,7 +10,7 @@ fn read_vec<T: std::str::FromStr>() -> Vec<T> {
 }
 
 fn main() {
-    let v = &read_vec::<i16>()[..];
+    let v = read_vec::<i16>();
     let (w, h, x, y, r) = (v[0], v[1], v[2], v[3], v[4]);
 
     println!("{}", if (x <= 0) | (y <= 0) | (x + r > w) | (y + r > h) {
