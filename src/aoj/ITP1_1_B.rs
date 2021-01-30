@@ -5,6 +5,5 @@ fn read<T: std::str::FromStr>() -> T {
 }
 
 fn main() {
-    let n = read::<i32>();
-    println!("{}", n * n * n)
+    println!("{}", read::<i32>().pow(3))
 }
