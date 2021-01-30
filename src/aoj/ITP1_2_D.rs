@@ -13,10 +13,10 @@ fn main() {
     let v = &read_vec::<i16>()[..];
     let (w, h, x, y, r) = (v[0], v[1], v[2], v[3], v[4]);
 
-    if (x <= 0) | (y <= 0) | (x + r > w) | (y + r > h){
-        println!("No");
+    println!("{}", if (x <= 0) | (y <= 0) | (x + r > w) | (y + r > h) {
+        "No"
     } else {
-        println!("Yes")
-    }
+        "Yes"
+    })
 }
 
