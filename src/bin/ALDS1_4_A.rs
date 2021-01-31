@@ -11,6 +11,23 @@ fn read_vec<T: std::str::FromStr>() -> Vec<T> {
         .collect()
 }
 
+// fn main() {
+//     read::<u16>();
+//     let s = read_vec::<i32>();
+//     read::<u16>();
+//     let t = read_vec::<i32>();
+//     let mut c = 0;
+//
+//     for tt in t {
+//         if s.contains(&tt) {
+//             c = c + 1
+//         }
+//     }
+//
+//     println!("{}", c)
+// }
+
+// with terminator
 fn main() {
     read::<u16>();
     let s = read_vec::<i32>();
@@ -19,7 +36,15 @@ fn main() {
     let mut c = 0;
 
     for tt in t {
-        if s.contains(&tt) {
+        let mut i = 0;
+        let mut ss = s.clone();
+        ss.push(tt);
+
+        while ss[i] != tt {
+            i = i + 1
+        }
+
+        if i != ss.len() - 1 {
             c = c + 1
         }
     }
