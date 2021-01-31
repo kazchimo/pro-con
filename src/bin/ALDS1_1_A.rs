@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 fn read<T: std::str::FromStr>() -> T {
     let mut s = String::new();
     std::io::stdin().read_line(&mut s).ok();
@@ -11,7 +13,8 @@ fn read_vec<T: std::str::FromStr>() -> Vec<T> {
         .collect()
 }
 
-fn println_vec(vec: &Vec<u16>) {
+
+fn println_vec<T: Display>(vec: &Vec<T>) {
     for (i, v) in vec.iter().enumerate() {
         if i != vec.len() - 1 {
             print!("{} ", v)
