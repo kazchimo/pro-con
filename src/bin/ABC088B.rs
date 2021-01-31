@@ -20,16 +20,13 @@ fn main() {
     avec.sort();
     avec.reverse();
 
-    let score = avec
-        .iter()
-        .enumerate()
-        .fold((0_u16, 0_u16), |acc, ele| {
-            if ele.0 % 2 == 0 {
-                (acc.0 + ele.1, acc.1)
-            } else {
-                (acc.0, acc.1 + ele.1)
-            }
-        });
+    let score = avec.iter().enumerate().fold((0_u16, 0_u16), |acc, ele| {
+        if ele.0 % 2 == 0 {
+            (acc.0 + ele.1, acc.1)
+        } else {
+            (acc.0, acc.1 + ele.1)
+        }
+    });
 
     println!("{}", score.0 - score.1)
 }

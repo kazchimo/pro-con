@@ -5,12 +5,18 @@ fn read<T: std::str::FromStr>() -> T {
 }
 
 fn read_vec<T: std::str::FromStr>() -> Vec<T> {
-    read::<String>().split_whitespace()
-        .map(|e| e.parse().ok().unwrap()).collect()
+    read::<String>()
+        .split_whitespace()
+        .map(|e| e.parse().ok().unwrap())
+        .collect()
 }
-
 
 fn main() {
     let v = read_vec::<u32>();
-    println!("{} {} {}", v[0] / v[1], v[0] % v[1], v[0] as f64 / v[1] as f64)
+    println!(
+        "{} {} {}",
+        v[0] / v[1],
+        v[0] % v[1],
+        v[0] as f64 / v[1] as f64
+    )
 }

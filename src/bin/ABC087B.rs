@@ -21,7 +21,6 @@ fn search(a: u16, b: u16, c: u16, x: u16) -> u16 {
     res
 }
 
-
 fn main() {
     let a = read::<u16>();
     let b = read::<u16>();

@@ -5,8 +5,10 @@ fn read<T: std::str::FromStr>() -> T {
 }
 
 fn read_vec<T: std::str::FromStr>() -> Vec<T> {
-    read::<String>().split_whitespace()
-        .map(|e| e.parse().ok().unwrap()).collect()
+    read::<String>()
+        .split_whitespace()
+        .map(|e| e.parse().ok().unwrap())
+        .collect()
 }
 
 fn main() {

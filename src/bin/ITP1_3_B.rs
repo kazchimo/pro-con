@@ -7,7 +7,9 @@ fn read<T: std::str::FromStr>() -> T {
 fn main() {
     for i in 1..10001 {
         let v = read::<u16>();
-        if v == 0 { break; }
+        if v == 0 {
+            break;
+        }
         println!("Case {}: {}", i, v)
     }
 }
