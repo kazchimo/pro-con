@@ -58,8 +58,5 @@ fn main() {
         }
     }
 
-    println!("{}", if can { "Yes" } else {
-        "No"
-    });
+    println!("{}", if can { "Yes" } else { "No" });
 }
-

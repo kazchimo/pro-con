@@ -41,7 +41,7 @@ fn main() {
     let mut maxv = -10_i64.pow(9);
     let mut minv = read::<i64>();
 
-    for _ in 0..n-1 {
+    for _ in 0..n - 1 {
         let r = read::<i64>();
         maxv = max(maxv, r - minv);
         minv = min(minv, r);

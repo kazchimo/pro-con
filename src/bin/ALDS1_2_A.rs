@@ -13,7 +13,6 @@ fn read_vec<T: std::str::FromStr>() -> Vec<T> {
         .collect()
 }
 
-
 fn println_vec<T: Display>(vec: &Vec<T>) {
     for (i, v) in vec.iter().enumerate() {
         if i != vec.len() - 1 {

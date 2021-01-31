@@ -13,7 +13,6 @@ fn read_vec<T: std::str::FromStr>() -> Vec<T> {
         .collect()
 }
 
-
 fn println_vec<T: Display>(vec: &Vec<T>) {
     for (i, v) in vec.iter().enumerate() {
         if i != vec.len() - 1 {
@@ -28,7 +27,6 @@ fn main() {
     let n = read::<usize>();
     let mut vec = read_vec::<u16>();
     println_vec(&vec);
-
 
     for i in 1..n {
         let v = vec[i];

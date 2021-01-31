@@ -17,7 +17,7 @@ fn main() {
                 break;
             } else if w == &"eraser" {
                 println!("NO");
-                return
+                return;
             }
         }
 
@@ -27,4 +27,3 @@ fn main() {
         }
     }
 }
-

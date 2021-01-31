@@ -27,7 +27,7 @@ fn println_vec<T: Display>(vec: &Vec<T>) {
     }
 }
 
-fn bubble_sort<T: PartialOrd>(vec: &mut Vec<T>) -> &Vec<T> {
+fn bubble_sort<T: PartialOrd>(vec: &mut Vec<T>) {
     let mut conti = true;
 
     while conti {
@@ -39,11 +39,9 @@ fn bubble_sort<T: PartialOrd>(vec: &mut Vec<T>) -> &Vec<T> {
             }
         }
     }
-
-    vec
 }
 
-fn selection_sort<T: PartialOrd>(vec: &mut Vec<T>) -> &Vec<T> {
+fn selection_sort<T: PartialOrd>(vec: &mut Vec<T>) {
     for i in 0..vec.len() {
         let mut minj = i;
 
@@ -57,11 +55,9 @@ fn selection_sort<T: PartialOrd>(vec: &mut Vec<T>) -> &Vec<T> {
             vec.swap(i as usize, minj as usize);
         }
     }
-
-    vec
 }
 
-fn insertion_sort<T: PartialOrd + Clone>(vec: &mut Vec<T>) -> &Vec<T> {
+fn insertion_sort<T: PartialOrd + Clone>(vec: &mut Vec<T>) {
     for i in 1..vec.len() {
         let v = vec[i].clone();
         let mut j = i;
@@ -73,6 +69,4 @@ fn insertion_sort<T: PartialOrd + Clone>(vec: &mut Vec<T>) -> &Vec<T> {
 
         vec[j] = v;
     }
-
-    vec
 }
