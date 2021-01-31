@@ -1,6 +1,6 @@
 // http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_D&lang=ja
 
-use std::cmp::max;
+use std::cmp::{max, min};
 
 fn read<T: std::str::FromStr>() -> T {
     let mut s = String::new();
@@ -38,19 +38,14 @@ fn read<T: std::str::FromStr>() -> T {
 
 fn main() {
     let n = read::<i64>();
-    let mut max = -10_i64.pow(9);
-    let mut min = read::<i64>();
+    let mut maxv = -10_i64.pow(9);
+    let mut minv = read::<i64>();
 
     for _ in 0..n-1 {
         let r = read::<i64>();
-        if max < (r - min) {
-            max = r - min
-        }
-
-        if r < min {
-            min = r
-        }
+        maxv = max(maxv, r - minv);
+        minv = min(minv, r);
     }
 
-    println!("{}", max)
+    println!("{}", maxv)
 }
